@@ -4,7 +4,7 @@
 # DATE:
 # 2020-10-08
 # WRITTEN BY:
-# Johannes Borgqvist, Adam Malik and mainly Carl Lundholm
+# Johannes Borgqvist, Adam Malik and Carl Lundholm
 # DESCRIPTION:
 # The program simulates the "bulk-surface" RD-model of cell polarisation where we have
 #  a coupled system of three ODEs describing the dynamics of three states: GTP-bound or active
