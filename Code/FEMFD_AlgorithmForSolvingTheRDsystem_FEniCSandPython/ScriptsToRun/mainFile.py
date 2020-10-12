@@ -55,7 +55,7 @@ d = 10
 #=================================================================================================
 #=================================================================================================
 # Loop over the various data sets and solve the FEM problem
-for dataIter in range(1): #Dont do special cases as for now
+for dataIter in range(2): #Dont do special cases as for now
     #dataSet = dataIter + 1
     dataSet = 2
     print("\t Dataset %d\n" %(dataSet))
