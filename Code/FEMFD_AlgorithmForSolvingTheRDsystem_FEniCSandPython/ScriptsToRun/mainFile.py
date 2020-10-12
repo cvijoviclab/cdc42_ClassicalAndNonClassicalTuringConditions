@@ -56,8 +56,7 @@ d = 10
 #=================================================================================================
 # Loop over the various data sets and solve the FEM problem
 for dataIter in range(2): #Dont do special cases as for now
-    #dataSet = dataIter + 1
-    dataSet = 2
+    dataSet = dataIter + 1
     print("\t Dataset %d\n" %(dataSet))
     #-----------------------------------------------------------------------------------------------------------------------------
     # IMPORT PARAMETERS FROM THE PARAMETER FILE
