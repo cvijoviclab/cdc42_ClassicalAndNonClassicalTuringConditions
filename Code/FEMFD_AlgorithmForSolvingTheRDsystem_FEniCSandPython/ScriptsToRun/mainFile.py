@@ -74,31 +74,30 @@ for dataIter in range(1): #Dont do special cases as for now
         c2 = 0.45
         u0 = 1.2263
         v0 = 0.6276
-        strBase = '../Classic_tAdaptive'
-        os.mkdir("../Classic_tAdaptive") 
+        strBase = '../../../Results/increasingGamma/Classical/21'
+        os.mkdir("../../../Results/increasingGamma/Classical/21")
+        
     else: # Non-classic, increasing d
         c1 =  0.05
         c_1 = 0.03
         c2 = 0.15
         u0 = 0.9059
         v0 = 0.9332
-        strBase = '../NonClassic_tAdaptive'
-        os.mkdir("../NonClassic_tAdaptive")         
+        strBase = '../../../Results/increasingGamma/NonClassical/21'
+        os.mkdir("../../../Results/increasingGamma/NonClassical/21")         
         
      # Initial concentraiton cytosolic cdc42, V (i.e. cdc42-GDI)
     V0 = (V0_init - ( a * (u0+v0)) )
     #--------------------------------------------------------------------------------------------------------------------------------------------------------
 
     # number of diffusion coefficients
-    #gammaVec = np.arange(10,11,10)
-    #gammaVec = np.arange(10,163,10)
-    gammaVec = np.arange(150,163,10)
+    gammaVec = np.arange(10,163,10)
     #-------------------------------------------------------------------------------------------------------------------------------------------------------
     #-------------------------------------------------------------------------------------------------------------------------------------------------------
     #------------------------------------------------------------------------------------------------------------------------------------------------------- 
     #--------------------------------------------------------------------------------------------------------------------------------------------------------    # Repat for stochasticity
-    print('\tWe repeat three times!\n\n')
-    nuOfRepeats = 1    
+    nuOfRepeats = 1
+    print('\tWe repeat %d times!\n\n' % (nuOfRepeats))    
     # Files for saving the tex-files, hey? Now, we save everything and do the plottung afterwards
     uMaxAvg_file = open("%s/uMax.csv" % (strBase), "w")
     uMinAvg_file = open("%s/uMin.csv" % (strBase), "w")
@@ -116,7 +115,6 @@ for dataIter in range(1): #Dont do special cases as for now
         for i in range(len(gammaVec)):
             #--------------------------------------------------------------------------------------------------------------------------------------------------------
             #--------------------------------------------------------------------------------------------------------------------------------------------------------
-            #gamma = 200
             gamma = gammaVec[i] # Relative diffusion of active versus the inactive
             #=================================================================================================
             #=================================================================================================
