@@ -208,9 +208,9 @@ def solvePDE(u0, v0, V0, c1,c_1,c2,cmax,gamma,d,D,dataSet,iteration,repeatIndex)
     print("\t\tWe will save solutions in pvd-files in a folder called 'reaction_system'","\n\t\tIt contains three subfolders:\n","\t\t\t(1.) Active\n\t\t\t(2.) Inactive\n\t\t\t(3.) Cytosolic\n")
     # Create VTK files for visualization output
     if dataSet == 1:
-        strOriginal = '../Classic'
+        strOriginal = '../../../Results/increasingGamma/Classical/21/Classical'
     else:
-        strOriginal = '../NonClassic'
+        strOriginal = '../../../Results/increasingGamma/NonClassical/21/NonClassical'
 
     # We add the parameter set
     strBase = strOriginal
