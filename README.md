@@ -5,7 +5,7 @@ This is the Github repositry of the manuscript ``Cell polarisation in a bulk-sur
 
 
 
-![**Figure 1:** The evolution of a pole being a single spot of active cdc42 for two different cases: (A) Classic Turing instability and (B) Non-classic Turing instability.](./Figures/evolutionPattern/evolutionPattern.pdf "Title"){width=100%}
+![**Figure 1:** The evolution of a pole being a single spot of active cdc42 for two different cases: (A) Classic Turing instability and (B) Non-classic Turing instability.](./Figures/evolutionPattern/evolutionPattern.png "Title"){width=100%}
 
 
 
