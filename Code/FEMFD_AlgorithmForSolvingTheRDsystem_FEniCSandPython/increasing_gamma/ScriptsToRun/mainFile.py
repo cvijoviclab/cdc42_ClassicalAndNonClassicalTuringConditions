@@ -49,7 +49,7 @@ D = 10000
 cmax = 3
 # Initial concentration V0
 V0_init = 6.0
-# The reaction strength parameter
+# The relative diffusion between the inactive and active state of Cdc42
 d = 10
 #=================================================================================================
 # Variable for denoting the dataSet
@@ -74,7 +74,7 @@ for dataIter in range(2): #Dont do special cases as for now
         c2 = 0.45
         u0 = 1.2263
         v0 = 0.6276
-        strBase = "../../../Results/increasingGamma/Classical/21"        
+        strBase = "../../../../Results/increasingGamma/Classical/21"        
         os.mkdir(strBase)
         
     else: # Non-classic, increasing gamma
@@ -83,7 +83,7 @@ for dataIter in range(2): #Dont do special cases as for now
         c2 = 0.15
         u0 = 0.9059
         v0 = 0.9332
-        strBase = "../../../Results/increasingGamma/NonClassical/21"
+        strBase = "../../../../Results/increasingGamma/NonClassical/21"
         os.mkdir(strBase)         
         
      # Initial concentraiton cytosolic cdc42, V (i.e. cdc42-GDI)
