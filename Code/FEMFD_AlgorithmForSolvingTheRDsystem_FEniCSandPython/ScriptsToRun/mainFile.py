@@ -21,8 +21,8 @@
 # (2) Checking the Turing conditions
 # (3) If the Turing conditions are satisfied, solve the PDEs using the implicit-explicit FD-FEM algorithm.
 #-----------------------------------------------------------------------------------------------------------------------------
-# WE run the scripts twice, one for each parameter set:
-# namely (high gamma, high d) and  (low gamma, low d)
+# We run the scripts twice, one for each parameter set:
+# namely Classical and Non-classical Turing instability with increasing gamma
 #-----------------------------------------------------------------------------------------------------------------------------
 #=================================================================================================
 #=================================================================================================
@@ -30,7 +30,7 @@
 #=================================================================================================
 # Two data sets, which we print to the user
 print('===========================================================================================================================================================\n')
-print('\tTwo data sets:\n\n\t\t(1) (high gamma,high d)\n\t\t(2)(low gamma,low d)\n')
+print('\tTwo data sets:\n\n\t\t(1) Classical Turing\n\t\t(2)Non-classical Turing\n')
 print('===========================================================================================================================================================\n')
 #=================================================================================================
 #=================================================================================================
@@ -68,7 +68,7 @@ for dataIter in range(2): #Dont do special cases as for now
     # The first and third are with high values of gamma, while
     # the second and fourth are with low values of gamma.
     #--------------------------------------------------------------------------------------------------------------------------------------------------------
-    if dataSet == 1:# Classic, increasing d
+    if dataSet == 1:# Classic, increasing gamma
         c1 =  0.05
         c_1 =  0.04
         c2 = 0.45
@@ -77,7 +77,7 @@ for dataIter in range(2): #Dont do special cases as for now
         strBase = "../../../Results/increasingGamma/Classical/21"        
         os.mkdir(strBase)
         
-    else: # Non-classic, increasing d
+    else: # Non-classic, increasing gamma
         c1 =  0.05
         c_1 = 0.03
         c2 = 0.15
