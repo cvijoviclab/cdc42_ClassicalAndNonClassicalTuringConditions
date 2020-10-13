@@ -22,7 +22,7 @@
 # (3) If the Turing conditions are satisfied, solve the PDEs using the implicit-explicit FD-FEM algorithm.
 #-----------------------------------------------------------------------------------------------------------------------------
 # We run the scripts twice, one for each parameter set:
-# namely Classical and Non-classical Turing instability with increasing gamma
+# namely Classical and Non-classical Turing instability with increasing d
 #-----------------------------------------------------------------------------------------------------------------------------
 #=================================================================================================
 #=================================================================================================
@@ -49,8 +49,8 @@ D = 10000
 cmax = 3
 # Initial concentration V0
 V0_init = 6.0
-# The reaction strength parameter
-d = 10
+# The relative reaction strength parameter gamma 
+gamma = 25
 #=================================================================================================
 # Variable for denoting the dataSet
 #=================================================================================================
@@ -74,7 +74,7 @@ for dataIter in range(2): #Dont do special cases as for now
         c2 = 0.45
         u0 = 1.2263
         v0 = 0.6276
-        strBase = "../../../Results/increasingGamma/Classical/21"        
+        strBase = "../../../../Results/increasing_d/Classical/21"        
         os.mkdir(strBase)
         
     else: # Non-classic, increasing gamma
@@ -83,20 +83,20 @@ for dataIter in range(2): #Dont do special cases as for now
         c2 = 0.15
         u0 = 0.9059
         v0 = 0.9332
-        strBase = "../../../Results/increasingGamma/NonClassical/21"
+        strBase = "../../../../Results/increasing_d/NonClassical/21"
         os.mkdir(strBase)         
         
      # Initial concentraiton cytosolic cdc42, V (i.e. cdc42-GDI)
     V0 = (V0_init - ( a * (u0+v0)) )
     #--------------------------------------------------------------------------------------------------------------------------------------------------------
-    # number of gamma values corresponding to the relative strength of the reaction
-    # versus diffusion
-    gammaVec = np.arange(10,163,10)
+    # number of d values corresponding to the relative diffusion of
+    # the two states
+    dVec = np.arange(10,103,6)
     # Save the gamma vector
     # convert array into dataframe 
-    DF0 = pd.DataFrame(gammaVec) 
+    DF0 = pd.DataFrame(dVec) 
     # save the dataframe as a csv file 
-    DF0.to_csv(strBase + "gammaVec.csv")    
+    DF0.to_csv(strBase + "dVec.csv")    
     #-------------------------------------------------------------------------------------------------------------------------------------------------------
     #-------------------------------------------------------------------------------------------------------------------------------------------------------
     #------------------------------------------------------------------------------------------------------------------------------------------------------- 
@@ -106,18 +106,18 @@ for dataIter in range(2): #Dont do special cases as for now
     print('\tWe repeat %d times!\n\n' % (nuOfRepeats))    
     # Define the matrices in which we will save four parameters:
     # uMax, uMin, tPole and ratioPole
-    u_maxAvg = np.zeros((len(gammaVec),nuOfRepeats),dtype=np.double)
-    u_minAvg = np.zeros((len(gammaVec),nuOfRepeats),dtype=np.double)
-    t_poleAvg = np.zeros((len(gammaVec),nuOfRepeats),dtype=np.double)
-    ratio_poleAvg = np.zeros((len(gammaVec),nuOfRepeats),dtype=np.double)
+    u_maxAvg = np.zeros((len(dVec),nuOfRepeats),dtype=np.double)
+    u_minAvg = np.zeros((len(dVec),nuOfRepeats),dtype=np.double)
+    t_poleAvg = np.zeros((len(dVec),nuOfRepeats),dtype=np.double)
+    ratio_poleAvg = np.zeros((len(dVec),nuOfRepeats),dtype=np.double)
     #-------------------------------------------------------------------------------------------------------------------------------------------------------     #-------------------------------------------------------------------------------------------------------------------------------------------------------      
     # We loop over the number of repetition (for stochasticity in the ICs)
     for innerIndex in range(nuOfRepeats):                     
         # We now loop through the various values of c_1 to run the calculations
-        for i in range(len(gammaVec)):
+        for i in range(len(dVec)):
             #--------------------------------------------------------------------------------------------------------------------------------------------------------
             #--------------------------------------------------------------------------------------------------------------------------------------------------------
-            gamma = gammaVec[i] # Extract the reaction strength
+            d = dVec[i] # Relative diffusion of active versus the inactive
             #=================================================================================================
             #=================================================================================================
             #=================================================================================================
