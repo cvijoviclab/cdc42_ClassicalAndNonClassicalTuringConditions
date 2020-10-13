@@ -14,23 +14,23 @@ In this paper, based on the previous model structure [2,3] we propose a simpler 
 
 In this repository, a script for generating the numerical description of the parameter space as well as two scripts for simulating the cdc42-mediated cell polarisation caused by diffusion driven instability are available in the ``Code'' folder. Here, code for processing and formatting the meshes, i.e. the spatial discretisations, used in the FEM are also found. In addition, code for analysing the results, i.e. the output data, from the FEM-FD simulations is presented as well as code for generating multiple figures presented in the article. 
 
-# Repository structure
+## Repository structure
 
 
 
 
-# Requirements for reproducing the result
+## Requirements for reproducing the result
 
 
 
-## Operating system
+### Operating system
 
 
-## Programming languages
+### Programming languages
 
 
 
-## Software
+### Software
 
 
 
