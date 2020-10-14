@@ -15,9 +15,19 @@ In this paper, based on the structure of a previous model [2,3] we propose a sim
 In this repository, a script for generating the numerical description of the parameter space as well as two scripts for simulating the cdc42-mediated cell polarisation caused by diffusion driven instability are available in the ``Code'' folder. Here, code for processing and formatting the meshes, i.e. the spatial discretisations, used in the FEM are also found. In addition, code for analysing the results, i.e. the output data, from the FEM-FD simulations is presented as well as code for generating multiple figures presented in the article. 
 
 ## Repository structure
+The following folders are contained in the repositry: 
 
+- **Code:** The folder contains the scripts for running the FEM-FD algorithm for simulating the evolution of the RD <br>
+system, it contains the script for generating a plot of the parameter space which determines which parameters that <br>
+give rise to classic and non-classic Turing instability, it contains the script for creating the meshes used in the <br>
+FEM-FD algorithm which corresponds to the spatial approximation of the cell, it contains a script for calculating the  <br>
+steady states of the homogeneous system which are used when setting the initial conditions in the FEM-FD algorithm and <br>
+lastly it contains a script for analysing the data obtained from a running the ``increasing gamma'' and ``increasing d''<br>
+experimental designs. 
+- **Results:**
+- **Figures:**
 
-
+Each of the sub folders in these three major folders contains their own ``README.md'' files which explains the details of how each script should be executed. 
 
 ## Requirements for reproducing the result
 
