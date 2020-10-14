@@ -22,18 +22,28 @@ The following folders are contained in the repositry:
 - **Figures:** It contain folders for generating the different types of figures presented in the article. All figures are generated in LaTeX but some of them are drawn directly in LaTeX (e.g. the ) whereas others includes external figures generated from other scripts (e.g. as the eps figures generated from the Matlab script in the parameter plot of the Turing space) or softwares (e.g. the eps figures of the concentration profiles of active Cdc42 generated from ParaView). 
 
 
-Each of the sub folders in these three major folders contains their own ``README.md'' files which explains the details of how each script should be executed. 
+Each of the sub folders in these three major folders contains their own ``README.md'' files which explains the details of how each script and software are used in the project.
 
 ## Requirements for reproducing the result
-
+This section contains information of operating system, programming languages (with libraries) and software required to reproduce the results.
 
 
 ### Operating system
-
+The repositry was created on a computer with the operating system Ubuntu 18.04.5 with the kernel Linux 4.15.0-118-generic.There are some shell scripts for running the scripts and on the mentioned computer a bash terminal has been used. In addition, the python scripts have been executed on two other local clusters residing in the building of the Department of Mathematical Sciences at the University of Gothenburg. The first one is called "Ozzy" which has 56 CPUs running on the operating Ubuntu 18.04.4 with kernel Linux 4.15.0-118-generic and the second one is called "Gantenbein" with 112 CPUs on the operating system Red Hat 10.1.1-1 with kernel Linux 4.15.0-101-generic. The easiest way to run the Python-scripts is through anaconda (see the Python subsection of the section on programming languages below) which requires a local installation on the computer you are working on. 
 
 ### Programming languages
+The scripts have been generated through both Python (version 3.8.3) and Matlab (release name R2018b version 9.5). 
 
+#### Python
+The three main libraries for executing the scripts of the FEM-FD algorithm are:
 
+1. numpy (version 1.18.5)
+2. pandas (version 1.0.5)
+3. the [FEniCS](https://fenicsproject.org/) [6] packages (version 2019.1.0) including the DOLFIN [7] library. 
+
+However, there are more packages and the easiest way to get hold of them is to use the package manager [anaconda](https://docs.anaconda.com/anaconda). The [local installation](https://docs.anaconda.com/anaconda/install/) of anaconda depends on your operating system, and then all relevant packages for this repositry can be accesed through the file "cd42.yml". This is done with running the command "conda env create -f cdc42.yml" (for more information see the following [link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)). 
+
+#### Matlab
 
 ### Software
 
@@ -64,3 +74,5 @@ Each of the sub folders in these three major folders contains their own ``README
 3. Rätz, Andreas, and Matthias Röger. "Symmetry breaking in a bulk–surface reaction–diffusion model for signalling networks." Nonlinearity 27.8 (2014): 1805.
 4. Larsson, Stig, and Vidar Thomée. Partial differential equations with numerical methods. Vol. 45. Springer Science & Business Media, 2008.
 5. Cheney, E. Ward, and David R. Kincaid. Numerical mathematics and computing. Cengage Learning, 2012.
+6. Alnæs, Martin, et al. "The FEniCS project version 1.5." Archive of Numerical Software 3.100 (2015). 
+7. Logg, Anders, and Garth N. Wells. "DOLFIN: Automated finite element computing." ACM Transactions on Mathematical Software (TOMS) 37.2 (2010): 1-28.
