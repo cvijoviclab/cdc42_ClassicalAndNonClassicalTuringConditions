@@ -44,7 +44,7 @@ The three main libraries for executing the scripts of the FEM-FD algorithm are:
 However, there are more required packages and the easiest way to get hold of them is to use the package manager [anaconda](https://docs.anaconda.com/anaconda). The [local installation](https://docs.anaconda.com/anaconda/install/) of anaconda depends on your operating system, and then all relevant packages for this repositry can be accesed through the file "cd42.yml". This is done with running the command "conda env create -f cdc42.yml" (for more information see the following [link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)). Thereafter, one has to activate the conda environment through "conda activate cdc42" and then one can execute the FEM-FD scripts provided that the installation of the packages was succesful. 
 
 #### Matlab
-In the script "parameterSpacePlot_NewtonIteration_20190120.m" for generating the Turing mapping of the parameter space in the folder "Code/MappingTheTuringParameterSpace_Matlab" a so called ["parfor"-loop](https://se.mathworks.com/help/matlab/ref/parfor.html) is used to speed up the efficiency of the calculations when the resolution of the resulting image is high. The resolution of the image in this case is determined by the parameter "nuOfIter" (e.g. nuOfIter = 1500;) on line 48 and if the resolution is lowered it is recommended to change to parfor-loop on line 147 to a regular for-loop. 
+In the script "parameterSpacePlot_NewtonIteration_20190120.m" for generating the Turing mapping of the parameter space in the folder "Code/MappingTheTuringParameterSpace_Matlab" a so called ["parfor"-loop](https://se.mathworks.com/help/matlab/ref/parfor.html) is used to speed up the efficiency of the calculations when the resolution of the resulting image is high. The resolution of the image in this case is determined by the parameter "nuOfIter" (e.g. nuOfIter = 1500) on line 48 and if the resolution is lowered it is recommended to change to parfor-loop on line 147 to a regular for-loop. 
 
 
 ### Software
@@ -53,7 +53,7 @@ There are two softwares used in the project.
 1. [Gmsh](https://gmsh.info/) [9] is used to generate the finite element meshes,
 2. [ParaView](https://www.paraview.org/) [8] is used for visualising the concentration profiles of active cdc42 during the polarisation process. 
 
-A more detailed descritption of how Gmsh was used in this repositry can be found in the README.md file in the folder "Code/GenerateFEMmesh_GmshAndPython" and a more detailed description of how Paraview was used in this repositry can be found in the folder ""
+A more detailed descritption of how Gmsh was used in this repositry can be found in the README.md file in the folder "Code/GenerateFEMmesh_GmshAndPython" and a more detailed description of how Paraview was used in this repositry can be found in the README.md in the "Results"-folder. 
 
 
 
