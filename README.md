@@ -19,7 +19,7 @@ The following folders are contained in the repositry:
 
 - **Code:** The folder contains the scripts for running the FEM-FD algorithm for simulating the evolution of the RD system, it contains the script for generating a plot of the parameter space which determines which parameters that give rise to classic and non-classic Turing instability, it contains the script for creating the meshes used in the FEM-FD algorithm which corresponds to the spatial approximation of the cell, it contains a script for calculating the steady states of the homogeneous system which are used when setting the initial conditions in the FEM-FD algorithm and lastly it contains a script for analysing the results or "data" obtained from a running the "increasing gamma" and "increasing d" experimental designs. 
 - **Results:** It contain "data files" or "output files" from the FEM-FD script corresponding to the experimental designs "increasing gamma" and "increasing d".  
-- **Figures:** It contain folders for generating the different types of figures presented in the article. All figures are generated in LaTeX but some of them are drawn directly in LaTeX (e.g. the ) whereas others includes external figures generated from other scripts (e.g. as the eps figures generated from the Matlab script in the parameter plot of the Turing space) or softwares (e.g. the eps figures of the concentration profiles of active Cdc42 generated from ParaView). 
+- **Figures:** It contain folders for generating the different types of figures presented in the article. All figures are generated in LaTeX but some of them are drawn directly in LaTeX (e.g. the schematic figure of the reaction mechanism of Cdc42) whereas others includes external figures generated from other scripts (e.g. as the eps figures generated from the Matlab script in the parameter plot of the Turing space) or softwares (e.g. the eps figures of the concentration profiles of active Cdc42 generated from ParaView). 
 
 
 Each of the sub folders in these three major folders contains their own ``README.md'' files which explains the details of how each script and software are used in the project.
@@ -37,15 +37,23 @@ The scripts have been generated through both Python (version 3.8.3) and Matlab (
 #### Python
 The three main libraries for executing the scripts of the FEM-FD algorithm are:
 
-1. numpy (version 1.18.5)
-2. pandas (version 1.0.5)
-3. the [FEniCS](https://fenicsproject.org/) [6] packages (version 2019.1.0) including the DOLFIN [7] library. 
+1. numpy (version 1.18.5),
+2. pandas (version 1.0.5),
+3. The [FEniCS](https://fenicsproject.org/) [6] packages (version 2019.1.0) including the DOLFIN [7] library. 
 
-However, there are more packages and the easiest way to get hold of them is to use the package manager [anaconda](https://docs.anaconda.com/anaconda). The [local installation](https://docs.anaconda.com/anaconda/install/) of anaconda depends on your operating system, and then all relevant packages for this repositry can be accesed through the file "cd42.yml". This is done with running the command "conda env create -f cdc42.yml" (for more information see the following [link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)). 
+However, there are more required packages and the easiest way to get hold of them is to use the package manager [anaconda](https://docs.anaconda.com/anaconda). The [local installation](https://docs.anaconda.com/anaconda/install/) of anaconda depends on your operating system, and then all relevant packages for this repositry can be accesed through the file "cd42.yml". This is done with running the command "conda env create -f cdc42.yml" (for more information see the following [link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)). Thereafter, one has to activate the conda environment through "conda activate cdc42" and then one can execute the FEM-FD scripts provided that the installation of the packages was succesful. 
 
 #### Matlab
+In the script "parameterSpacePlot_NewtonIteration_20190120.m" for generating the Turing mapping of the parameter space in the folder "Code/MappingTheTuringParameterSpace_Matlab" a so called ["parfor"-loop](https://se.mathworks.com/help/matlab/ref/parfor.html) is used to speed up the efficiency of the calculations when the resolution of the resulting image is high. The resolution of the image in this case is determined by the parameter "nuOfIter" (e.g. nuOfIter = 1500;) on line 48 and if the resolution is lowered it is recommended to change to parfor-loop on line 147 to a regular for-loop. 
+
 
 ### Software
+There are two softwares used in the project. 
+
+1. [Gmsh](https://gmsh.info/) [9] is used to generate the finite element meshes,
+2. [ParaView](https://www.paraview.org/) [8] is used for visualising the concentration profiles of active cdc42 during the polarisation process. 
+
+A more detailed descritption of how Gmsh was used in this repositry can be found in the README.md file in the folder "Code/GenerateFEMmesh_GmshAndPython" and a more detailed description of how Paraview was used in this repositry can be found in the folder ""
 
 
 
@@ -76,3 +84,5 @@ However, there are more packages and the easiest way to get hold of them is to u
 5. Cheney, E. Ward, and David R. Kincaid. Numerical mathematics and computing. Cengage Learning, 2012.
 6. Alnæs, Martin, et al. "The FEniCS project version 1.5." Archive of Numerical Software 3.100 (2015). 
 7. Logg, Anders, and Garth N. Wells. "DOLFIN: Automated finite element computing." ACM Transactions on Mathematical Software (TOMS) 37.2 (2010): 1-28.
+8. Ahrens, James, Berk Geveci, and Charles Law. "Paraview: An end-user tool for large data visualization." The visualization handbook 717 (2005).
+9. Geuzaine, Christophe, and Jean‐François Remacle. "Gmsh: A 3‐D finite element mesh generator with built‐in pre‐and post‐processing facilities." International journal for numerical methods in engineering 79.11 (2009): 1309-1331.
