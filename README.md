@@ -17,15 +17,10 @@ In this repository, a script for generating the numerical description of the par
 ## Repository structure
 The following folders are contained in the repositry: 
 
-- **Code:** The folder contains the scripts for running the FEM-FD algorithm for simulating the evolution of the RD <br>
-system, it contains the script for generating a plot of the parameter space which determines which parameters that <br>
-give rise to classic and non-classic Turing instability, it contains the script for creating the meshes used in the <br>
-FEM-FD algorithm which corresponds to the spatial approximation of the cell, it contains a script for calculating the  <br>
-steady states of the homogeneous system which are used when setting the initial conditions in the FEM-FD algorithm and <br>
-lastly it contains a script for analysing the data obtained from a running the ``increasing gamma'' and ``increasing d''<br>
-experimental designs. 
-- **Results:**
-- **Figures:**
+- **Code:** The folder contains the scripts for running the FEM-FD algorithm for simulating the evolution of the RD system, it contains the script for generating a plot of the parameter space which determines which parameters that give rise to classic and non-classic Turing instability, it contains the script for creating the meshes used in the FEM-FD algorithm which corresponds to the spatial approximation of the cell, it contains a script for calculating the steady states of the homogeneous system which are used when setting the initial conditions in the FEM-FD algorithm and lastly it contains a script for analysing the results or "data" obtained from a running the "increasing gamma" and "increasing d" experimental designs. 
+- **Results:** It contain "data files" or "output files" from the FEM-FD script corresponding to the experimental designs "increasing gamma" and "increasing d".  
+- **Figures:** It contain folders for generating the different types of figures presented in the article. All figures are generated in LaTeX but some of them are drawn directly in LaTeX (e.g. the ) whereas others includes external figures generated from other scripts (e.g. as the eps figures generated from the Matlab script in the parameter plot of the Turing space) or softwares (e.g. the eps figures of the concentration profiles of active Cdc42 generated from ParaView). 
+
 
 Each of the sub folders in these three major folders contains their own ``README.md'' files which explains the details of how each script should be executed. 
 
