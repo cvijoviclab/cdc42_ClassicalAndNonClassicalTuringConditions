@@ -1,0 +1,66 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[swedish,english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{pgfplots}
+\usepackage{amsmath,mathtools}
+\usepgfplotslibrary{fillbetween}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    %hide axis,
+    %axis lines* = left,
+    %axis lines=left, xtick=\empty, ytick=\empty.
+    axis line style={draw=none},
+    tick style={draw=none},
+    xticklabel style={yshift=-0.1mm},
+    xmin = 8.5,
+   xmax = 161,
+   ymin = -0.1,
+    ymax = 5.1,
+    %grid=both,
+    %xtick = {1,0.95,...,0.6},
+    ytick = {1,...,6},    
+    %xticklabels = {{zero},$\alpha$,$\varphi$},
+   %xlabel style={at={(axis cs:0.61,7)},anchor=east,align=center},
+    %ylabel style={at={(axis cs:1.00,35)},anchor=north,rotate=0},
+	xlabel = {Reaction strength $\gamma$},
+        ylabel = {Max. and min. conc.,\\ $u_{\max}$ and $u_{\min}$},
+        ylabel style = {align=center},
+    legend style={at={(axis cs:20,4.5)},anchor=west,cells={align=center},nodes={scale=0.75}},
+    %x dir=reverse
+    %legend entries = {Decreasing the inactivation rate $k_{-2}$}
+]
+%-------------------------------------------------------------------------------------------------
+% AXES
+\draw[->,-latex, thick] (axis cs: 10,0) -- (axis cs: 10,5.0); % y-axis
+\draw[->,-latex] (axis cs: 10,0) -- (axis cs: 160.5,0); % x-axis
+%-------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------
+% Classical 
+%-------------------------------------------------------------------------------------------------
+\input{./Input/uMax_Classical_High.tex}
+\input{./Input/uMax_Classical.tex}
+\input{./Input/uMax_Classical_Low.tex}
+\input{./Input/uMin_Classical_High.tex}
+\input{./Input/uMin_Classical.tex}
+\input{./Input/uMin_Classical_Low.tex}
+\addlegendentry{Classic Turing}% Add to legend
+%-------------------------------------------------------------------------------------------------
+% Non-classical
+%-------------------------------------------------------------------------------------------------
+%\input{./Input/uMax_NonClassical_High.tex}
+%\input{./Input/uMax_NonClassical.tex}
+%\input{./Input/uMax_NonClassical_Low.tex}
+%\input{./Input/uMin_NonClassical_High.tex}
+%\input{./Input/uMin_NonClassical.tex}
+%\input{./Input/uMin_NonClassical_Low.tex}
+%\addlegendentry{Non-Classic Turing}% Add to legend
+\end{axis}
+
+\end{tikzpicture}
+
+
+
+\end{document}

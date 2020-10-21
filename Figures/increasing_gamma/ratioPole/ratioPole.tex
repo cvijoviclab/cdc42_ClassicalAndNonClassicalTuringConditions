@@ -1,0 +1,59 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[swedish,english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{pgfplots}
+\usepackage{amsmath,mathtools}
+\usepgfplotslibrary{fillbetween}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    %hide axis,
+    %axis lines* = left,
+    %axis lines=left, xtick=\empty, ytick=\empty.
+    axis line style={draw=none},
+    tick style={draw=none},
+    xticklabel style={yshift=-0.1mm},
+    xmin = 8.5,
+   xmax = 161,
+    ymin = 14.8,
+    ymax = 40,
+    %grid=both,
+    %xtick = {1,0.95,...,0.6},
+    ytick = {15,17,...,100},    
+    %xticklabels = {{zero},$\alpha$,$\varphi$},
+   %xlabel style={at={(axis cs:0.61,7)},anchor=east,align=center},
+    %ylabel style={at={(axis cs:1.00,35)},anchor=north,rotate=0},
+	xlabel = {Reaction strength $\gamma$},
+        ylabel = {Ratio pole, $A\;\%$},
+    legend style={at={(axis cs:20,35)},anchor=west,cells={align=center},nodes={scale=0.75}},
+    %x dir=reverse
+    %legend entries = {Decreasing the inactivation rate $k_{-2}$}
+]
+%-------------------------------------------------------------------------------------------------
+% AXES
+\draw[->,-latex, thick] (axis cs: 10,15) -- (axis cs: 10,40); % y-axis
+\draw[->,-latex] (axis cs: 10,15) -- (axis cs: 160.5,15); % x-axis
+%-------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------
+% Classical 
+%-------------------------------------------------------------------------------------------------
+\input{./Input/ratioPole_Classical_High.tex}
+\input{./Input/ratioPole_Classical.tex}
+\input{./Input/ratioPole_Classical_Low.tex}
+\addlegendentry{Classic Turing}% Add to legend
+%-------------------------------------------------------------------------------------------------
+% Non-classical
+%-------------------------------------------------------------------------------------------------
+\input{./Input/ratioPole_NonClassical_High.tex}
+\input{./Input/ratioPole_NonClassical.tex}
+\input{./Input/ratioPole_NonClassical_Low.tex}
+\addlegendentry{Non-Classic Turing}% Add to legend
+\end{axis}
+
+\end{tikzpicture}
+
+
+
+\end{document}

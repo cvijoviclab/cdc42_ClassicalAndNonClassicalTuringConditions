@@ -1,0 +1,59 @@
+\documentclass[tikz,border=2mm]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[swedish,english]{babel}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{pgfplots}
+\usepackage{amsmath,mathtools}
+\usepgfplotslibrary{fillbetween}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    %hide axis,
+    %axis lines* = left,
+    %axis lines=left, xtick=\empty, ytick=\empty.
+    axis line style={draw=none},
+    tick style={draw=none},
+    xticklabel style={yshift=-0.1mm},
+    xmin = 8.5,
+   xmax = 161,
+    ymin = -0.5,
+    ymax = 35,
+    %grid=both,
+    %xtick = {1,0.95,...,0.6},
+    ytick = {0,5,...,50},    
+    %xticklabels = {{zero},$\alpha$,$\varphi$},
+   %xlabel style={at={(axis cs:0.61,7)},anchor=east,align=center},
+    %ylabel style={at={(axis cs:1.00,35)},anchor=north,rotate=0},
+	xlabel = {Reaction strength $\gamma$},
+        ylabel = {Polarisation time, $\tau_{\textrm{final}}$},
+    legend style={at={(axis cs:20,25)},anchor=west,cells={align=center},nodes={scale=0.75}},
+    %x dir=reverse
+    %legend entries = {Decreasing the inactivation rate $k_{-2}$}
+]
+%-------------------------------------------------------------------------------------------------
+% AXES
+\draw[->,-latex, thick] (axis cs: 10,0) -- (axis cs: 10,35); % y-axis
+\draw[->,-latex] (axis cs: 10,0) -- (axis cs: 160.5,0); % x-axis
+%-------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------
+% Classical 
+%-------------------------------------------------------------------------------------------------
+\input{./Input/polTime_Classical_High.tex}
+\input{./Input/polTime_Classical.tex}
+\input{./Input/polTime_Classical_Low.tex}
+\addlegendentry{Classic Turing}% Add to legend
+%-------------------------------------------------------------------------------------------------
+% Non-classical
+%-------------------------------------------------------------------------------------------------
+\input{./Input/polTime_NonClassical_High.tex}
+\input{./Input/polTime_NonClassical.tex}
+\input{./Input/polTime_NonClassical_Low.tex}
+\addlegendentry{Non-Classic Turing}% Add to legend
+\end{axis}
+
+\end{tikzpicture}
+
+
+
+\end{document}
