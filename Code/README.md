@@ -73,3 +73,4 @@ The script that generates the Turing mapping of the parameter space is called "p
 
 
 # The scripts for generating the plots of the output from the FEM-FD algorithm
+The script that generates the data files for plotting the results of the "increase ganna" and "increase d" designs are found on the path "Code/GenerateExperimentalDesignPlots\_Matlab/quantilesOfSimulations.m". It takes the data in "Results/increasingGamma" and "Results/increasing_d" and outputs data files in the sub folders of "Figures/increase\_d" and "Figures/increase\_gamma". 
