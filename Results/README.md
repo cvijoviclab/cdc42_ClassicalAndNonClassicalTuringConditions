@@ -26,3 +26,8 @@ If one wishes to generate a movie of the evolution of the concentration profile 
 
 
 There are multiple tutorials of how to use [ParaView](https://www.paraview.org/tutorials/) available. 
+
+
+## Identifying the number of poles in the ``increasing gamma'' design
+
+The number of poles as a function of increasing gamma have been identified for both the classic and the non-classic case. This has been done by looking at the pvd-files manually in paraview. The results have been saved in two xls-files, path: `"Results/increasingGamma/Classical/nuOfPoles\_increasingGamma\_Classic.xlsx" and "Results/increasingGamma/NonClassical/nuOfPoles\_increasingGamma\_NonClassic.xlsx" respectively. These files along with the previously listed csv-files are accessed by the script with path "Code/GenerateExperimentalDesignPlots\_Matlab/quantilesOfSimulations.m". 
