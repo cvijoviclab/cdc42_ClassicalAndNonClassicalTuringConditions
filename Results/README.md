@@ -19,7 +19,7 @@ The concentration profiles of the components of the RD model can be saved into f
 
 
 ![**Figure 2:** The graphical interface of ParaView used for visualising the concentration profile of active cdc42](../Figures/explanatoryFigures/ParaView.png "The formation of two poles")
-
+**Figure 2:** The graphical interface of ParaView used for visualising the concentration profile of active cdc42.
 
 If one wishes to generate a movie of the evolution of the concentration profile one has to save more time steps in the FEM-FD algorithm. This is done on by uncommenting the if-statements on the lines 398-405 in the file "FEMandFD_solver_ImpExp_linear_tAdaptive_PoleFinder.py" stored in the folders "/Code/FEMFD\_AlgorithmForSolvingTheRDsystem\_FEniCSandPython/increasing\_gamma/ScriptsToRun" and "/Code/FEMFD\_AlgorithmForSolvingTheRDsystem\_FEniCSandPython/increasing\_d/ScriptsToRun". On these specific lines an image is saved every 100th step and the reason why these images are not saved is because they take up much memory. However, given the corresponding pvd-file one can run the simulations and one can also export individual images for each time step in different formats. This is done by clicking on "File>Export Scene", and this is the methodology that has generated the individual eps-figures found in "Figures/evolutionPattern/Pictures". 
 
