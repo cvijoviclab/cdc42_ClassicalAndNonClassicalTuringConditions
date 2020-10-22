@@ -18,8 +18,8 @@ data = readtable('../../Results/increasingGamma/Classical/1/gammaVec.csv');
 temp = table2array(data);
 gammaVec = temp(2:end,2);
 extraOption = false; % whether to forget plot or not in the legend
-% Define the number of experiments
-%nuOfExperiments = length(gammaVec);
+% The number of data points are
+nuOfRepititions = 20;
 %% -----------------------------------------------------------------------------------
 % NUMBER OF POLES: CLASSIC
 % Classic
@@ -44,8 +44,6 @@ generatePlots(nuOfPoles,destinationFolder,gammaVec,colourStr,fillSpaceStr,opacit
 % UMAX AND UMIN
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % CLASSIC UMIN AND UMAX
-% The number of data points are
-nuOfRepititions = 20;
 % Read data: umin
 dataStr = '/uMin.csv';
 Case = 'increasingGamma/Classical/';
@@ -75,8 +73,6 @@ generatePlots(uMaxClassic,destinationFolder,gammaVec,colourStr,fillSpaceStr,opac
 % NON-CLASSIC UMIN AND MAX
 % umax we do not forget in the legend
 extraOption = false;
-% The number of data points are
-nuOfRepititions = 19;
 % Read data: umin
 dataStr = '/uMin.csv';
 Case = 'increasingGamma/NonClassical/';
@@ -108,8 +104,6 @@ extraOption = false;
 % POLARISATION TIME
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % CLASSIC POLARISATION TIME
-% The number of data points are
-nuOfRepititions = 20;
 % Read data:  
 dataStr = '/tPole.csv';
 Case = 'increasingGamma/Classical/';
@@ -124,8 +118,6 @@ generatePlots(tPoleClassic,destinationFolder,gammaVec,colourStr,fillSpaceStr,opa
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % NON-CLASSIC POLARISATION TIME
-% The number of data points are
-nuOfRepititions = 19;
 %Read data:  
 dataStr = '/tPole.csv';
 Case = 'increasingGamma/NonClassical/';
@@ -143,8 +135,6 @@ generatePlots(tPoleNonClassic,destinationFolder,gammaVec,colourStr,fillSpaceStr,
 % POLE RATIO
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % CLASSIC POLE RATIO
-% The number of data points are
-nuOfRepititions = 20;
 % Read data:  
 dataStr = '/ratioPole.csv';
 Case = 'increasingGamma/Classical/';
@@ -159,8 +149,6 @@ generatePlots(ratioPoleClassic,destinationFolder,gammaVec,colourStr,fillSpaceStr
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % NON-CLASSIC POLE RATIO
-% The number of data points are
-nuOfRepititions = 19;
 % Read data:  
 dataStr = '/ratioPole.csv';
 Case = 'increasingGamma/NonClassical/';
@@ -183,8 +171,6 @@ temp = table2array(data);
 dVec = temp(2:end,2);
 % Define the number of experiments
 nuOfExperiments = length(dVec);
-% The number of data points are
-nuOfRepititions = 20;
 %% -----------------------------------------------------------------------------------
 % UMAX AND UMIN
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
