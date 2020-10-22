@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.31)  20 OCT 2020 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.31)  22 OCT 2020 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,21 +685,21 @@ File: ./ratioPole/ratioPole.pdf Graphic file (type pdf)
 <use ./ratioPole/ratioPole.pdf>
 Package pdftex.def Info: ./ratioPole/ratioPole.pdf  used on input line 22.
 (pdftex.def)             Requested size: 258.98793pt x 204.20139pt.
-<./polTime/polTime.pdf, id=30, 258.68243pt x 210.62791pt>
+<./polTime/polTime.pdf, id=30, 258.68243pt x 210.6309pt>
 File: ./polTime/polTime.pdf Graphic file (type pdf)
 <use ./polTime/polTime.pdf>
 Package pdftex.def Info: ./polTime/polTime.pdf  used on input line 23.
-(pdftex.def)             Requested size: 258.6818pt x 210.6274pt.
+(pdftex.def)             Requested size: 258.6818pt x 210.63039pt.
 <./maxMin/maxMin.pdf, id=31, 264.46pt x 207.50826pt>
 File: ./maxMin/maxMin.pdf Graphic file (type pdf)
 <use ./maxMin/maxMin.pdf>
 Package pdftex.def Info: ./maxMin/maxMin.pdf  used on input line 24.
 (pdftex.def)             Requested size: 264.45935pt x 207.50774pt.
-<./nuOfPoles/nuOfPoles.pdf, id=32, 258.68243pt x 210.6259pt>
+<./nuOfPoles/nuOfPoles.pdf, id=32, 258.68243pt x 204.0704pt>
 File: ./nuOfPoles/nuOfPoles.pdf Graphic file (type pdf)
 <use ./nuOfPoles/nuOfPoles.pdf>
 Package pdftex.def Info: ./nuOfPoles/nuOfPoles.pdf  used on input line 25.
-(pdftex.def)             Requested size: 258.6818pt x 210.62537pt.
+(pdftex.def)             Requested size: 258.6818pt x 204.06989pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./ratioPole/ratioPole.pdf>
@@ -720,7 +720,7 @@ r/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 sr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfrm1000.pfb>
-Output written on increasing_gammaQuantitative.pdf (1 page, 76480 bytes).
+Output written on increasing_gammaQuantitative.pdf (1 page, 76350 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream
